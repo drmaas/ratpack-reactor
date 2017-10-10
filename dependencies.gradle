@@ -1,0 +1,19 @@
+ext {
+  commonVersions = [
+    groovy : '2.4.10',
+    ratpack: '1.5.0',
+    reactor: '3.1.0.RELEASE',
+    spock  : '1.1-groovy-2.4',
+    logback: '1.2.3',
+  ]
+
+  commonDependencies = [
+    groovy           : "org.codehaus.groovy:groovy:${commonVersions.groovy}",
+    ratpack          : "io.ratpack:ratpack-core:${commonVersions.ratpack}",
+    reactor          : "io.projectreactor:reactor-core:${commonVersions.reactor}",
+    reactorTest      : "io.projectreactor:reactor-test:${commonVersions.reactor}",
+    spock            : "org.spockframework:spock-unitils:${commonVersions.spock}",
+    ratpackGroovyTest: "io.ratpack:ratpack-groovy-test:${commonVersions.ratpack}",
+    logback          : "ch.qos.logback:logback-classic:${commonVersions.logback}"
+  ]
+}

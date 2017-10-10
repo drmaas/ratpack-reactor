@@ -1,0 +1,52 @@
+= ratpack-reactor
+Ratpack support for reactor
+
+image::https://travis-ci.org/drmaas/ratpack-reactor.svg?branch=master["Build Status", https://travis-ci.org/drmaas/ratpack-reactor]
+
+image::https://forthebadge.com/images/badges/uses-badges.svg["forthebadge", https://forthebadge.com]
+
+== Gradle
+```
+compile 'me.drmaas:ratpack-reactor:x.x.x'
+```
+
+== Maven
+```
+<dependency>
+    <groupId>me.drmaas</groupId>
+    <artifactId>ratpack-reactor</artifactId>
+    <version>x.x.x/version>
+</dependency>
+```
+
+== Examples
+
+=== Flux
+```
+ratpack {
+  handlers {
+    get(":value") {
+      flux(Blocking.get {
+        pathTokens.value
+      }).promise().then {
+        render it
+      }
+    }
+  }
+}
+```
+
+=== Mono
+```
+ratpack {
+  handlers {
+    get(":value") {
+      mono(Blocking.get {
+        pathTokens.value
+      }).promiseSingle().then {
+        render it
+      }
+    }
+  }
+}
+```
