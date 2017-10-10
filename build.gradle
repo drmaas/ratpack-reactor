@@ -42,15 +42,15 @@ dependencies {
 
 modifyPom {
   project {
-    name 'Ratpack kotlin dsl library'
-    description 'Ratpack kotlin dsl library'
-    url 'https://github.com/drmaas/ratpack-kotlin'
+    name 'Ratpack reactor library'
+    description 'Ratpack reactor library'
+    url 'https://github.com/drmaas/ratpack-reactor'
     inceptionYear '2016'
 
     scm {
-      url 'https://github.com/drmaas/ratpack-kotlin'
-      connection 'scm:https://drmaas@github.com/drmaas/ratpack-kotlin.git'
-      developerConnection 'scm:git://github.com/drmaas/ratpack-kotlin.git'
+      url 'https://github.com/drmaas/ratpack-reactor'
+      connection 'scm:https://drmaas@github.com/drmaas/ratpack-reactor.git'
+      developerConnection 'scm:git://github.com/drmaas/ratpack-reactor.git'
     }
 
     licenses {
