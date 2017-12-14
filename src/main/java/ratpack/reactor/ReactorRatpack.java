@@ -281,7 +281,7 @@ public abstract class ReactorRatpack {
    * @see #promiseSingle(Mono)
    */
   public static <T> Promise<List<T>> promise(Flux<T> flux) throws UnmanagedThreadException {
-    return Promise.async(f -> flux.collectList().subscribe(f::success, f::error));
+    return Promise.async(f -> flux.collectList().subscribe(f::success, f::error, f::complete));
   }
 
   /**
@@ -348,7 +348,7 @@ public abstract class ReactorRatpack {
    * @see #promise(Flux)
    */
   public static <T> Promise<T> promiseSingle(Mono<T> mono) throws UnmanagedThreadException {
-    return Promise.async(f -> mono.subscribe(f::success, f::error));
+    return Promise.async(f -> mono.subscribe(f::success, f::error, f::complete));
   }
 
   /**
