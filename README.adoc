@@ -1,5 +1,8 @@
 = ratpack-reactor
+
 Ratpack support for reactor
+
+### DEPRECATED - use https://github.com/ratpack/ratpack/tree/master/ratpack-reactor ###
 
 image::https://travis-ci.org/drmaas/ratpack-reactor.svg?branch=master["Build Status", https://travis-ci.org/drmaas/ratpack-reactor]
 
